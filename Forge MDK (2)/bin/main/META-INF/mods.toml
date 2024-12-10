@@ -1,0 +1,27 @@
+modLoader = "javafml" # mandatory
+loaderVersion = "[1.20,)" # mandatory
+license = "MIT" # mandatory
+
+[[mods]] # mandatory
+    modId = "killmobs" # mandatory
+    version = "1.0.0" # mandatory
+    displayName = "KillMobs Mod" # mandatory
+    description = '''
+    A server-side Minecraft mod for version 1.20.1 that automatically clears all untamed, unnamed mobs
+    and items every 30 minutes across all dimensions, including modded ones, with an announcement in chat.
+    ''' # mandatory
+    authors = "boon!" # optional
+
+[[dependencies.killmobs]]
+    modId = "forge" # mandatory
+    mandatory = true
+    versionRange = "[45.0.0,)" # Compatible Forge versions
+    ordering = "NONE"
+    side = "SERVER"
+
+[[dependencies.killmobs]]
+    modId = "minecraft" # mandatory
+    mandatory = true
+    versionRange = "[1.20.1,1.21)" # Minecraft version range
+    ordering = "NONE"
+    side = "SERVER"
